@@ -1,0 +1,203 @@
+:root {
+  --colorPrimary: #1073ba;
+  --colorSecondary: #00da55;
+  --grey: #3b3b3b;
+  --white: #ffffff;
+  --black: #1f1f1f;
+  --lightgrey: #e1e1e1;
+  --break: 5rem;
+  --firstFont: "Roboto", sans-serif;
+  --secondFont: "Lato", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--firstFont);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Global */
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: var(--secondFont);
+  margin: calc(var(--break) / 2) 0;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+/* Degradaded */
+.color-degrade {
+  color: transparent;
+  background: linear-gradient(to right, var(--colorPrimary) 0%, var(--colorSecondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Hedader */
+
+.header {
+  background-color: var(--black);
+  padding: calc(var(--break) * 3) 0;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .container-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.header-text {
+  text-align: center;
+  padding-top: var(--break);
+}
+
+@media (min-width: 768px) {
+  .header-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+.header-text p {
+  margin: 0;
+}
+.tagline-product {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.product-name {
+  font-size: 6rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .product-name {
+    font-size: 10rem;
+    line-height: 1;
+  }
+}
+.product-price span {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+/* Iconos */
+.icons {
+  padding: var(--break) 0;
+}
+@media (min-width: 768px) {
+  .icons {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: calc(var(--break) / 2);
+}
+.icon:last-of-type {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .icon {
+    margin: 0;
+  }
+}
+.icon img {
+  width: 5rem;
+}
+.icon h3 {
+  color: var(--colorPrimary);
+  text-transform: uppercase;
+  margin-top: calc(var(--break) / 2);
+}
+
+/* Section about techPro */
+.about-tech {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--colorPrimary) 0%), url(../img/imagen-mujer.jpg);
+  background-position: right;
+  background-repeat: repeat, no-repeat;
+  background-size: 100%, 110rem;
+}
+@media (min-width: 768px) {
+  .about-tech {
+    background-image: linear-gradient(to left, transparent 50%, var(--colorPrimary) 0%), url(../img/imagen-mujer.jpg);
+  }
+}
+.about-tech-grid {
+  display: grid;
+  grid-template-rows: repeat(2 ,40rem);
+  row-gap: var(--break);
+}
+@media (min-width: 768px) {
+  .about-tech-grid {
+    grid-template-rows: unset;
+    row-gap: unset;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    padding: calc(var(--break) * 2);
+  }
+}
+.text-about-tech {
+  grid-row: 2 / 3;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: var(--break);
+}
+@media (min-width: 768px) {
+  .text-about-tech {
+    padding-bottom: 0;
+  }
+}
+.text-about-tech h2 {
+  font-size: 4rem;
+}
+.text-about-tech p {
+  font-size: 2rem;
+  line-height: 2;
+}
