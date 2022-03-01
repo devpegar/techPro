@@ -235,6 +235,11 @@ img {
   background-repeat: no-repeat;
   background-position: 90% center;
   background-size: 15rem;
+  transition: transform .3s, background-size .5s;
+}
+.model:hover {
+  transform: scale(1.1);
+  background-size: 30rem;
 }
 @media (min-width: 992px) {
   .model {
