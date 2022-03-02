@@ -60,13 +60,17 @@ img {
 
 /* Utilities */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Degradaded */
 .color-degrade {
   color: transparent;
-  background: linear-gradient(to right, var(--colorPrimary) 0%, var(--colorSecondary) 100%);
+  background: linear-gradient(
+    to right,
+    var(--colorPrimary) 0%,
+    var(--colorSecondary) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -157,19 +161,66 @@ img {
 
 /* Section about techPro */
 .about-tech {
-  background-image: linear-gradient(to bottom, transparent 50%, var(--colorPrimary) 0%), url(../img/imagen-mujer.jpg);
   background-position: right;
   background-repeat: repeat, no-repeat;
-  background-size: 100%, 110rem;
+  background-size: 100%, 112rem;
+}
+.notavif.nowebp .about-tech {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--colorPrimary) 0%
+    ),
+    url(../img/imagen-mujer.jpg);
+}
+.webp .about-tech {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--colorPrimary) 0%
+    ),
+    url(../img/imagen-mujer.webp);
+}
+.avif .about-tech {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--colorPrimary) 0%
+    ),
+    url(../img/imagen-mujer.avif);
 }
 @media (min-width: 768px) {
   .about-tech {
-    background-image: linear-gradient(to left, transparent 50%, var(--colorPrimary) 0%), url(../img/imagen-mujer.jpg);
+    background-repeat: repeat, no-repeat;
+  }
+  .notavif.nowebp .about-tech {
+    background-image: linear-gradient(
+        to left,
+        transparent 50%,
+        var(--colorPrimary) 0%
+      ),
+      url(../img/imagen-mujer.jpg);
+  }
+  .webp .about-tech {
+    background-image: linear-gradient(
+        to left,
+        transparent 50%,
+        var(--colorPrimary) 0%
+      ),
+      url(../img/imagen-mujer.webp);
+  }
+  .avif .about-tech {
+    background-image: linear-gradient(
+        to left,
+        transparent 50%,
+        var(--colorPrimary) 0%
+      ),
+      url(../img/imagen-mujer.avif);
   }
 }
 .about-tech-grid {
   display: grid;
-  grid-template-rows: repeat(2 ,40rem);
+  grid-template-rows: repeat(2, 40rem);
   row-gap: var(--break);
 }
 @media (min-width: 768px) {
@@ -235,7 +286,7 @@ img {
   background-repeat: no-repeat;
   background-position: 90% center;
   background-size: 15rem;
-  transition: transform .3s, background-size .5s;
+  transition: transform 0.3s, background-size 0.5s;
 }
 .model:hover {
   transform: scale(1.1);
@@ -285,4 +336,109 @@ img {
 }
 .model-z .price {
   font-size: 6rem;
+}
+
+/* newsletter */
+
+.newsletter {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%, 70rem;
+}
+.notavif.nowebp .newsletter {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--white) 0%),
+    url(../img/newsletter.jpg);
+}
+.webp .newsletter {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--white) 0%),
+    url(../img/newsletter.webp);
+}
+.avif .newsletter {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--white) 0%),
+    url(../img/newsletter.avif);
+}
+@media (min-width: 768px) {
+  .newsletter {
+    background-position: center, -22rem 0rem;
+    background-size: 100%, 100rem;
+    padding: 10rem 0;
+  }
+  .notavif.nowebp .newsletter {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        var(--white) 0%
+      ),
+      url(../img/newsletter.jpg);
+  }
+  .webp .newsletter {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        var(--white) 0%
+      ),
+      url(../img/newsletter.webp);
+  }
+  .avif .newsletter {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        var(--white) 0%
+      ),
+      url(../img/newsletter.avif);
+  }
+}
+@media (min-width: 2200px) {
+  .newsletter {
+    background-size: 100%, 200rem;
+    background-position: center, 0% -30rem;
+  }
+}
+.container-newsletter {
+  display: grid;
+  grid-template-rows: repeat(2, 40rem);
+  gap: var(--break);
+}
+@media (min-width: 768px) {
+  .container-newsletter {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.text-newsletter {
+  grid-row: 2 / 3;
+}
+@media (min-width: 768px) {
+  .text-newsletter {
+    grid-row: unset;
+    grid-column: 2 / 3;
+  }
+}
+.form input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+}
+.form input[type="submit"] {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--colorPrimary);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  border: none;
+  transition: background-color 0.3s;
+}
+.form input[type="submit"]:hover {
+  background-color: var(--colorSecondary);
+}
+
+/* footer */
+
+.footer p {
+  font-family: var(--secondFont);
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--colorPrimary);
+  padding: 2rem 0;
 }
